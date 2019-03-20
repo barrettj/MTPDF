@@ -149,7 +149,7 @@
 // D: 2011 11 03 11 31 32 +11 '00'
 - (NSDate *)dateFromPDFDateString:(NSString *)string
 {
-    if (!string || ![string length]) { return nil; }
+    if (!string || [string length] == 0) { return nil; }
 	
     NSRange yearRange   = NSMakeRange(2, 4);
     NSRange monthRange  = NSMakeRange(yearRange.location    + yearRange.length,     2);
